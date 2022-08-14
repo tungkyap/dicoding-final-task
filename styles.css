@@ -1,0 +1,330 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #F9F7F7;
+    margin: 0;
+}
+
+header {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    position: fixed;
+    top: -15px;
+    background-color: #112D4E;
+}
+
+
+/* Navbar section */
+
+.navbar {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 1.25rem;
+}
+
+.navbar-logo {
+    display: inline-block;
+    padding-top: 20px;
+    padding-bottom: 0.5rem;
+    margin-right: 1.5rem;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.collapse:not(.show) {
+    display: none; 
+}
+
+.navbar-right {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.navbar-list {
+    display: flex;
+    flex-direction: row;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.navbar .navbar-list .navbar-item {
+    margin: 0 0.5rem;
+}
+
+.navbar-link {
+    display: block;
+    padding: 0.25rem 1rem;
+    color: #F9F7F7;
+    text-decoration: none;
+}
+
+.navbar-link:hover, .navbar-link:focus {
+    color: #DBE2EF;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.active .navbar-link {
+    background-color: #3F72AF;
+    color: #F9F7F7;
+    border-radius: 0.3rem;
+}
+
+.active .navbar-link:hover {
+    background-color: #F9F7F7;
+    color: #3F72AF;
+    transition: all 0.3s ease-in-out;
+}
+
+.dropdown {
+    display: none;
+}
+
+/* Responsive navbar */
+
+@media screen and (max-width: 768px) {
+    .navbar-right {
+        display: none;
+    }
+
+    /* dropdown navbar menu */
+
+    .dropbtn {
+        color: #F9F7F7;
+        background-color: #3F72AF;
+        padding: 0.25rem 0.75rem;
+        font-size: 16px;
+        border: 2px solid #3F72AF;
+        line-height: 1;
+        border-radius: 0.3rem;
+        margin-top: 15px;
+        cursor: pointer;
+    }
+      
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+      
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        right: 0;
+        background-color: #DBE2EF;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        
+    }
+      
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        transition: all 0.3s ease-in-out;
+    }
+      
+    .dropdown-content a:hover {
+        background-color: #f1f1f1;
+    }
+    .dropdown:hover .dropdown-content {
+        display: block;
+        transition: all 0.5s ease-in-out;
+    }
+    .dropdown:hover .dropbtn {
+        text-decoration: none;
+        transition: all 0.5s ease-in-out;
+    }
+}
+
+
+main {
+    background-color: antiquewhite;
+    margin-top: 4.5rem;
+    float: right;
+    width: 100%;
+}
+
+@media (min-width: 1000px) {
+    main {
+        width: 69%;
+    }
+}
+
+@media (min-width: 1200px) {
+    main {
+        width: 77%;
+    }
+}
+
+aside {
+    background-color: aqua;
+}
+
+/* floating left aside panel */
+.panel {
+    display: flex;
+    width: 310px;
+    position: fixed;
+    z-index: 1;
+    top: 20px;
+    left: 10px;
+    background-color: #3F72AF;
+    overflow-x: hidden;
+    padding: 8px 0;
+    padding-right: 2.5rem;
+    float: left;
+    border-radius: 30px;
+    /* height: calc(100vh - 475px); */
+    height: 310px;
+    margin-top: 4.5rem;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: 2px 5px 4px 1px rgba(0,0,0,0.21);
+    -webkit-box-shadow: 2px 5px 4px 1px rgba(0,0,0,0.21);
+    -moz-box-shadow: 2px 5px 4px 1px rgba(0,0,0,0.21);
+}
+
+.panel-content {
+    all: unset;
+    margin-left: 1.5rem;
+    color: #F9F7F7;
+}
+
+.profile-img {
+    max-width: 100%;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-right: 5.5rem;
+    margin-top: 1rem;
+}
+
+.profile-name {
+    margin: 0;
+    margin-top: 1rem;
+}
+
+.dot::after {
+    content: "";
+    background-color: #112D4E;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 5px;
+    height: 8px;
+    width: 8px;
+}
+
+.job {
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-top: 9px;
+    margin-right: 3.5rem;
+}
+
+.panel-footer {
+    margin-top: auto;
+}
+
+.social-media  {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 0;
+}
+
+.list-inline-item {
+    padding-left: 0;
+    padding-right: 10px;
+    list-style: none;
+}
+
+.social-media a {
+    color: #112D4E;
+    background: #DBE2EF;
+    border-radius: 50%;
+    display: block;
+    height: 30px;
+    line-height: 32px;
+    text-align: center;
+    width: 30px;
+}
+
+.social-media a:hover {
+    color: #DBE2EF;
+    background: #112D4E;
+    transition: all 0.3s ease-in-out;
+}
+
+.copyright {
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+/* floating icon for responsive panel */
+
+.panel-icon {
+    display: none;
+    
+}
+
+.info {
+    color: #112D4E;
+    background: #DBE2EF;
+    border-radius: 50%;
+    height: 50px;
+    line-height: 32px;
+    text-align: center;
+    width: 50px;
+    font-size: 30px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #3F72AF;
+    box-shadow: 2px 5px 4px 1px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 2px 5px 4px 1px rgba(0,0,0,0.2);
+    -moz-box-shadow: 2px 5px 4px 1px rgba(0,0,0,0.2);
+}
+
+@media screen and (max-width: 1000px) {
+    .panel-icon {
+        display: block;
+        float: left;
+        position: fixed;
+        left: 10px;
+        z-index: 1;
+        margin-top: 5.5rem;
+    }
+
+    .panel {
+        display: none;
+    }
+}
+
+
+article {
+    background-color: aquamarine;
+}
+
+footer {
+    background-color: azure;
+}
