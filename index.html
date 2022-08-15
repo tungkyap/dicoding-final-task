@@ -50,11 +50,11 @@
     </header>
     <!-- Show icon panel when screen breakpoint condition is true -->
     <div class="panel-icon">
-        <span class="info"><i class="fas fa-info-circle"></i></span>
+        <span class="info" onclick="showPanel()"><i class="fas fa-info-circle"></i></span>
     </div>
     <!-- This is for fixed panel, contains: your profile image, your name and your job -->
-    <aside class="panel">
-        <div class="panel-content">
+    <aside id="panel" class="panel">
+        <article class="panel-content">
             <img class="profile-img" src="./profile.png" width="100px" height="100px">
             <h2 class="profile-name dot">Tungky Adi Pradana</h2>
             <span class="job">Front-end Web Developer</span>
@@ -75,13 +75,24 @@
                 </ul>
             </div>
             <span class="copyright">© 2022 tungky.adi</span>
-        </div>
+        </article>
     </aside>
     <!-- This is main tag for the main content -->
     <main>
         <!-- Home section -->
         <aside class="home">
-            
+            <article class="home-content">
+                <h1 class="home-profile-name">Tungky Adi Pradana <span class="dot"></span></h1>
+                <p class="home-text">
+                    A Front-End Web Developer, currently working in private company engaged in academics. Have 2 years experience with <i class="fab fa-angular"></i> Angular framework.
+                </p>
+                <div class="scrollspy">
+                    <a href="#portfolio" class="button btn-left"><i class="fas fa-th-large" style="margin-right: 5px;"></i> My Portfolio</a>
+                    <div class="spacer"></div>
+                    <a href="#contact" class="button btn-right"><i class="fas fa-envelope-open-text" style="margin-right: 5px;"></i> Collaboration</a>
+                </div>
+            </article>
+            <div class="overlay"></div>
         </aside>
         <!-- Portfolio section -->
         <aside class="portfolio">
