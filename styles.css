@@ -963,6 +963,10 @@ footer {
     flex-wrap: wrap;
 }
 
+.contact-form button:hover {
+    cursor: pointer;
+}
+
 .contact-form-group {
     margin-bottom: 20px;
 }
