@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Tungky's Personal Space</title>
+    <title>Tungky's Space</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,135 +11,385 @@
     <script src="https://kit.fontawesome.com/a7f745ba66.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
-    <!-- Navigation bar -->
-    <header>
-        <nav class="navbar">
-            <a class="navbar-logo" href="#home" style="color: white;">Your logo</a>
-            <!-- Show navbar menu dropdown when screen breakpoint condition is true -->
-            <div class="dropdown" style="float:right;">
-                <button class="dropbtn">Menu</button>
-                <div class="dropdown-content">
-                  <a href="#home">Home</a>
-                  <a href="#portfolio">Portfolio</a>
-                  <a href="#blog">Blog</a>
-                  <a href="#about">About</a>
-                  <a href="#contact">Contact</a>
+    <div class="container">
+        <!-- Navigation bar -->
+        <header>
+            <nav class="navbar">
+                <a class="navbar-logo" style="color: white;">
+                    <img src="logo.png" alt="logo" height="30">
+                </a>
+                <div class="navbar-right" id="navbarCollapse">
+                    <ul id="navbarList" class="navbar-list dropdown-list">
+                        <li class="navbar-item active">
+                            <a class="navbar-link" href="#home">Home</a>
+                        </li>
+                        <li class="navbar-item">
+                            <a class="navbar-link" href="#portfolio">Portfolio</a>
+                        </li>
+                        <li class="navbar-item">
+                            <a class="navbar-link" href="#blog">Blog</a>
+                        </li>
+                        <li class="navbar-item">
+                            <a class="navbar-link" href="#about">About</a>
+                        </li>
+                        <li class="navbar-item">
+                            <a class="navbar-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
                 </div>
-            </div>
-            <div class="navbar-right" id="navbarCollapse">
-                <ul id="navbarList" class="navbar-list dropdown-list">
-                    <li class="navbar-item active">
+                <!-- Show navbar menu dropdown when screen breakpoint condition is true -->
+                <div class="dropdown" style="float:right;">
+                    <button class="dropbtn">Menu</button>
+                    <div class="dropdown-content">
                         <a class="navbar-link" href="#home">Home</a>
-                    </li>
-                    <li class="navbar-item">
                         <a class="navbar-link" href="#portfolio">Portfolio</a>
-                    </li>
-                    <li class="navbar-item">
                         <a class="navbar-link" href="#blog">Blog</a>
-                    </li>
-                    <li class="navbar-item">
                         <a class="navbar-link" href="#about">About</a>
-                    </li>
-                    <li class="navbar-item">
                         <a class="navbar-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <!-- Show icon panel when screen breakpoint condition is true -->
-    <div class="panel-icon">
-        <span class="info" onclick="showPanel()"><i class="fas fa-info-circle"></i></span>
-    </div>
-    <!-- This is for fixed panel, contains: your profile image, your name and your job -->
-    <aside id="panel" class="panel">
-        <article class="panel-content">
-            <img class="profile-img" src="./profile.png" width="100px" height="100px">
-            <h2 class="profile-name dot">Tungky Adi Pradana</h2>
-            <span class="job">Front-end Web Developer</span>
-            <div class="panel-footer">
-                <ul class="social-media">
-                    <li class="list-inline-item">
-                        <a href="https://web.facebook.com/tungky.p/" target="_blank"><i class="fab fa-facebook"></i></a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="https://www.linkedin.com/in/tungky-ap/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="https://www.youtube.com/channel/UCpSeke_4wuiGilNYQ-jZizw" target="_blank"><i class="fab fa-youtube"></i></a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="https://github.com/tungkyap" target="_blank"><i class="fab fa-github"></i></a>
-                    </li>
-                </ul>
-            </div>
-            <span class="copyright">© 2022 tungky.adi</span>
-        </article>
-    </aside>
-    <!-- This is main tag for the main content -->
-    <main>
-        <!-- Home section -->
-        <aside class="home">
-            <article class="home-content">
-                <h1 class="home-profile-name">Tungky Adi Pradana <span class="dot"></span></h1>
-                <p class="home-text">
-                    A Front-End Web Developer, currently working in private company engaged in academics. Have 2 years experience with <i class="fab fa-angular"></i> Angular framework.
-                </p>
-                <div class="scrollspy">
-                    <a href="#portfolio" class="button btn-left"><i class="fas fa-th-large" style="margin-right: 5px;"></i> My Portfolio</a>
-                    <div class="spacer"></div>
-                    <a href="#contact" class="button btn-right"><i class="fas fa-envelope-open-text" style="margin-right: 5px;"></i> Collaboration</a>
+                    </div>
                 </div>
+            </nav>
+        </header>
+        <!-- Show icon panel when screen breakpoint condition is true -->
+        <div class="panel-icon">
+            <span class="info" onclick="showPanel()"><i class="fas fa-info-circle"></i></span>
+        </div>
+    
+        <!-- This is for fixed panel, contains: your profile image, your name and your job -->
+        <aside id="panel" class="panel">
+            <article class="panel-content">
+                <img class="profile-img" src="./profile.png" width="100px" height="100px">
+                <h2 class="profile-name dot">Tungky Adi Pradana</h2>
+                <span class="job">Front-end Web Developer</span>
+                <div class="panel-footer">
+                    <ul class="social-media">
+                        <li class="list-inline-item">
+                            <a href="https://web.facebook.com/tungky.p/" target="_blank"><i class="fab fa-facebook"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.linkedin.com/in/tungky-ap/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.youtube.com/channel/UCpSeke_4wuiGilNYQ-jZizw" target="_blank"><i class="fab fa-youtube"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://github.com/tungkyap" target="_blank"><i class="fab fa-github"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <span class="copyright">© 2022 tungky.adi</span>
             </article>
-            <div class="overlay"></div>
         </aside>
-        <!-- Portfolio section -->
-        <aside class="portfolio">
-            This is for your portfolio
+        <!-- This is main tag for the main content -->
+        <main>
+            <!-- Home section -->
+            <div class="home-logo" style="display: none;"></div>
+            <aside id="home" class="home section">
+                <article class="home-content">
+                    <h1 class="home-profile-name">Tungky Adi Pradana <span class="dot"></span></h1>
+                    <p class="home-text">
+                        A Front-End Web Developer, currently working in private company engaged in academic purposes. Have 2 years experience with <i class="fab fa-angular"></i> Angular framework.
+                    </p>
+                    <div class="home-button-group">
+                        <a href="#portfolio" class="button btn-left"><i class="fas fa-th-large" style="margin-right: 5px;"></i> My Portfolio</a>
+                        <div class="spacer"></div>
+                        <a href="#contact" class="button btn-right"><i class="fas fa-envelope-open-text" style="margin-right: 5px;"></i> Collaboration</a>
+                    </div>
+                </article>
+                <div class="overlay"></div>
+            </aside>
+            <!-- Portfolio section -->
+            <aside id="portfolio" class="portfolio section">
+    
+                <h3 class="aside-title">Portfolio</h3>
+                <div class="spacer-lg"></div>
+    
+                <div class="row">
+                    <div class="column">
+                        <div class="portfolio-group">
+                            <a href="#" class="portfolio-item">
+                                <img src="home.jpg" alt="sample-portfolio-image">
+                                <div class="thumbnail">
+                                    <div class="details">
+                                        <h4 class="title">Backend Admin</h4>
+                                        <span class="term">Backend</span>
+                                    </div>
+                                    <span class="plus-icon">+</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="portfolio-group">
+                            <a href="#" class="portfolio-item">
+                                <img src="home.jpg" alt="sample-portfolio-image">
+                                <div class="thumbnail">
+                                    <div class="details">
+                                        <h4 class="title">Backend Admin</h4>
+                                        <span class="term">Backend</span>
+                                    </div>
+                                    <span class="plus-icon">+</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="portfolio-group">
+                            <a href="#" class="portfolio-item">
+                                <img src="home.jpg" alt="sample-portfolio-image">
+                                <div class="thumbnail">
+                                    <div class="details">
+                                        <h4 class="title">Backend Admin</h4>
+                                        <span class="term">Backend</span>
+                                    </div>
+                                    <span class="plus-icon">+</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="portfolio-group">
+                            <a href="#" class="portfolio-item">
+                                <img src="home.jpg" alt="sample-portfolio-image">
+                                <div class="thumbnail">
+                                    <div class="details">
+                                        <h4 class="title">Backend Admin</h4>
+                                        <span class="term">Backend</span>
+                                    </div>
+                                    <span class="plus-icon">+</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="portfolio-group">
+                            <a href="#" class="portfolio-item">
+                                <img src="home.jpg" alt="sample-portfolio-image">
+                                <div class="thumbnail">
+                                    <div class="details">
+                                        <h4 class="title">Backend Admin</h4>
+                                        <span class="term">Backend</span>
+                                    </div>
+                                    <span class="plus-icon">+</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="portfolio-group">
+                            <a href="#" class="portfolio-item">
+                                <img src="home.jpg" alt="sample-portfolio-image">
+                                <div class="thumbnail">
+                                    <div class="details">
+                                        <h4 class="title">Backend Admin</h4>
+                                        <span class="term">Backend</span>
+                                    </div>
+                                    <span class="plus-icon">+</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="portfolio-group">
+                            <a href="#" class="portfolio-item">
+                                <img src="home.jpg" alt="sample-portfolio-image">
+                                <div class="thumbnail">
+                                    <div class="details">
+                                        <h4 class="title">Backend Admin</h4>
+                                        <span class="term">Backend</span>
+                                    </div>
+                                    <span class="plus-icon">+</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="portfolio-group">
+                            <a href="#" class="portfolio-item">
+                                <img src="home.jpg" alt="sample-portfolio-image">
+                                <div class="thumbnail">
+                                    <div class="details">
+                                        <h4 class="title">Backend Admin</h4>
+                                        <span class="term">Backend</span>
+                                    </div>
+                                    <span class="plus-icon">+</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            <!-- Blog section -->
+            <aside id="blog" class="blog section">
+                <!-- This is for your blogs -->
+                <h3 class="aside-title">Blogs</h3>
+                <div class="spacer-lg"></div>
+                
+                <article class="blog-card">
+                    <div class="blog-content-left"></div>
+                    <div class="blog-content-right">
+                        <h2>Blog Title 1</h2>
+                        <h5>Author August 24, 2022</h5>
+                        <p>Some text...</p>
+                        <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-content-left"></div>
+                    <div class="blog-content-right">
+                        <h2>Blog Title 1</h2>
+                        <h5>Author August 24, 2022</h5>
+                        <p>Some text...</p>
+                        <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-content-left"></div>
+                    <div class="blog-content-right">
+                        <h2>Blog Title 1</h2>
+                        <h5>Author August 24, 2022</h5>
+                        <p>Some text...</p>
+                        <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-content-left"></div>
+                    <div class="blog-content-right">
+                        <h2>Blog Title 1</h2>
+                        <h5>Author August 24, 2022</h5>
+                        <p>Some text...</p>
+                        <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                    </div>
+                </article>
+                
+            </aside>
+    
+            <!-- About section -->
+            <aside id="about" class="about section">
+                <h3 class="aside-title">About Me</h3>
+                <!-- This is for your detailed information -->
+    
+                <div class="row">
+                    <div class="profile-group">
+                        <div class="profile-photo">
+                            <img class="profile-img" src="./profile.png" width="150px" height="150px">
+                        </div>
+                        <div class="profile-details">
+                            <h2 class="profile-intro">Hello, Tungky's here! </h2>
+                            <p class="profile-desc">
+                                My name is Tungky, a front-end web developer from Yogyakarta, Indonesia. I have experience on developing a websites (desktop or mobile web-apps).
+                                I can use vanilla <i class="fab fa-html5"></i> HTML, <i class="fab fa-css3-alt"></i> CSS, <i class="fab fa-js"></i> JS for building websites and also can use <i class="fab fa-angular"></i> Angular framework. Currently working as Software Engineer 
+                                in private company engaged in academic purposes. Feel free to contact me using my email for business collaboration and discussion.
+                            </p>
+                            <div class="row profile-group">
+                                <div class="profile-bio">
+                                    <p>Name: <span class="black">Tungky Adi Pradana</span></p>
+                                    <p>D.O.B.: <span class="black">December 21<sup>st</sup> 1995</span></p>
+                                </div>
+                                <div class="profile-bio">
+                                    <p>Address: <span class="black">Yogyakarta, Indonesia</span></p>
+                                    <p>Email: <span class="black">adi.pradana95@gmail.com</span></p>
+                                </div>
+                            </div>
+                            <div class="profile-button-group">
+                                <a href="#portfolio" class="button btn-left"><i class="fas fa-download" style="margin-right: 5px;"></i> Download CV</a>
+                                <div class="profile-spacer"></div>
+                                <a href="#contact" class="button btn-primary btn-right"><i class="fas fa-envelope-open-text" style="margin-right: 5px;"></i> Collaboration</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- <section class="skills">
+                    <div class="spacer-lg"></div>
+                    <h3 class="aside-title">Skills</h3>
+                </section>
+    
+                <section class="experience">
+                    <div class="spacer-lg"></div>
+                    <h3 class="aside-title">Experience Journey</h3>
+                </section> -->
+                
+            </aside>
+    
+                <!-- Contact section -->
+            <aside id="contact" class="contact section">
+                <!-- This is for contact using form -->
+                <h3 class="aside-title">Contact Me</h3>
+                <div class="spacer-lg"></div>
+    
+                <div class="row">
+                    <div class="contact-group">
+                        <div class="contact-content-left">
+                            <div class="contact-info">
+                                <i class="fas fa-phone"></i>
+                                <div class="contact-detail">
+                                    <h5>Phone/Whatsapp Number</h5>
+                                    <span class="contact-value">+6285875317958</span>
+                                </div>
+                            </div>
+                            <div class="contact-info">
+                                <i class="fas fa-envelope"></i>
+                                <div class="contact-detail">
+                                    <h5>Email</h5>
+                                    <span class="contact-value">adi.pradana95@gmail.com</span>
+                                </div>
+                            </div>
+                            <div class="contact-info">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div class="contact-detail">
+                                    <h5>Address</h5>
+                                    <span class="contact-value">Yogyakarta, Indonesia</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contact-content-right">
+                            <form class="contact-form" action="">
+                                <div class="row">
+                                    <div class="contact-form-left">
+                                        <div class="contact-form-group">
+                                            <input type="text" class="contact-form-control" placeholder="Your name">
+                                        </div>
+                                    </div>
+                                    <div class="contact-form-right">
+                                        <div class="contact-form-group">
+                                            <input type="email" class="contact-form-control" placeholder="Email Address">
+                                        </div>
+                                    </div>
+                                    <div class="contact-form-full">
+                                        <div class="contact-form-group">
+                                            <input type="text" class="contact-form-control" placeholder="Subject">
+                                        </div>
+                                    </div>
+                                    <div class="contact-form-full">
+                                        <div class="contact-form-group">
+                                            <textarea class="contact-form-control" rows="5" placeholder="Message" style="height: 123px; resize: vertical;"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="submit" class="button btn-left" style="border: none;"><i class="fas fa-paper-plane" style="margin-right: 5px;"></i> Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </main>
+    
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <!-- This is for footer -->
+                <div class="row" style="display: flex; flex-wrap: wrap;">
+                    <div class="footer-wrapper"> <p class="footer-text">© 2022 Tungky Adi Pradana - All Rights Reserved </p></div>
+                </div>
+            </div>
+        </footer>
 
-            <!-- Sample content -->
-            <h2>Auto Sidebar</h2>
-            <p>This sidebar is as tall as its content (the links), and is always shown.</p>
-            <p>Scroll down the page to see the result.</p>
-            <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-            <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-            <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-            <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-            <p>This sidebar is as tall as its content (the links), and is always shown.</p>
-            <p>Scroll down the page to see the result.</p>
-            <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-            <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-            <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-            <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-            <p>This sidebar is as tall as its content (the links), and is always shown.</p>
-            <p>Scroll down the page to see the result.</p>
-            <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-            <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-            <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-            <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-        </aside>
-        <aside class="about">
-            This is for your detailed information
-        </aside>
-        <aside class="blog">
-            This is for your blog
-            <article class="blog-1">
-                <h3>Blog 1</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis earum quisquam aut id nesciunt asperiores necessitatibus quas blanditiis. Modi eaque minima quaerat earum voluptatem sequi nemo fugiat nostrum quod fuga.</p>
-            </article>
-            <article class="blog-2">
-                <h3>Blog 2</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis earum quisquam aut id nesciunt asperiores necessitatibus quas blanditiis. Modi eaque minima quaerat earum voluptatem sequi nemo fugiat nostrum quod fuga.</p>
-            </article>
-        </aside>
-        <article class="contact">
-            This is for contact using form
-        </article>
-    </main>
-    <footer>
-        this is footer
-    </footer>
+        <div id="autoScrollTop" class="scroll" onclick="scrollToTop();">
+            <i class="fas fa-angle-up"></i>
+        </div>
+    </div>
+
 <!-- Javascript scripts -->
 <script src="./scripts.js"></script>
 </body>
